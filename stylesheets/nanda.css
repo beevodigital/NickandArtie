@@ -179,6 +179,46 @@ body{
 }
 /*** End of Featured Column ***/
 
+/*** Twitter ***/
+.tweet,
+.query {
+	color: #fff;
+}
+
+.tweet_list {
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+}
+	
+.tweet_list li {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0.5em;
+	list-style-type: none;
+	}
+
+.tweet_list li a {
+	color: #fff;
+}
+
+.tweet_list .tweet_even {
+}
+
+.tweet_list .tweet_avatar {
+	padding-right: .5em; float: left;
+}
+
+.tweet_list .tweet_avatar img {
+	vertical-align: middle;
+	width:35px;
+}
+/*** end of Twitter ***/
+
 @media only screen and (max-width: 767px) {
 	.Navigation{
 		height:600px;

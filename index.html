@@ -66,7 +66,8 @@
 			<div class="twitter-module-body">
 				<div class="twitter-module-arrow">
 				</div>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+				<div id="twitter-body">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -129,7 +130,8 @@
   	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>	
   	<script src="javascripts/tabs.js"></script>
   	<script src="javascripts/jquery.fitvids.js"></script>
-	<script src="javascripts/slides.min.jquery.js"></script>     
+	<script src="javascripts/slides.min.jquery.js"></script>
+	<script src="libraries/twitter/jquery.tweet.js"></script>     
 			<script>
             	$(function(){
                 	$("#slideshow").slides({
@@ -139,6 +141,16 @@
 									generatePagination:false
 								});
             	});
+
+				jQuery(function($){
+				        $("#twitter-body").tweet({
+				          join_text: "auto",
+				          username: "nickandartie",
+				          avatar_size: 35,
+				          count: 5,
+				          loading_text: "loading tweets..."
+				        });
+				      });
 			</script>
 </body>
 </html>
