@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="stylesheets/layout.css">
 	
 	<link rel="stylesheet" href="stylesheets/nanda.css">
+	<link rel="stylesheet" href="libraries/ScrollBar/jquery.mCustomScrollbar.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -67,6 +68,30 @@
 				<div class="twitter-module-arrow">
 				</div>
 				<div id="twitter-body">
+				</div>
+				<div class="twitter-footer">
+					<a href="http://www.twitter.com" target="_blank">See More</a>
+				</div>
+			</div>
+		</div>
+		<div class="advertisement-left">
+			<a href="">
+				<img src="images/sidead.jpg"/>
+			</a>
+		</div>
+		
+		<div class="photo-module">
+			<div class="photo-module-heading">
+			</div>
+			<div class="photo-module-body">
+				<div id="PhotoReel" class="content">
+					<div class="images_container">
+						<img src="images/sidead.jpg" id="photo1"/>
+						<img src="images/sidead.jpg" id="photo2"/>
+						<img src="images/sidead.jpg" id="photo3"/>
+						<img src="images/sidead.jpg" id="photo4"/>
+						<img src="images/sidead.jpg" id="photo5"/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -121,17 +146,30 @@
 				</div>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
 			</div>
-		</div>      
+		</div> 
+		<div class="advertisement-right">
+			<a href="">
+				<img src="images/sidead.jpg"/>
+			</a>
+		</div> 
+		<div class="road-module">
+			<div class="road-module-heading">
+			</div>
+			<div class="road-module-body">
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+			</div>
+		</div>    
       </div>    
     </div>
     <hr /> 
 	</div>
 	</div>
-  	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>	
-  	<script src="javascripts/tabs.js"></script>
-  	<script src="javascripts/jquery.fitvids.js"></script>
+  	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	<script src="javascripts/slides.min.jquery.js"></script>
-	<script src="libraries/twitter/jquery.tweet.js"></script>     
+	<script src="libraries/twitter/jquery.tweet.js"></script>   
+	<script src="libraries/ScrollBar/jquery.mousewheel.min.js"></script>
+	<script src="libraries/ScrollBar/jquery.mCustomScrollbar.js"></script>  
 			<script>
             	$(function(){
                 	$("#slideshow").slides({
@@ -151,6 +189,50 @@
 				          loading_text: "loading tweets..."
 				        });
 				      });
+				
+			</script>
+			<script>
+				(function($){
+					$(window).load(function(){
+						$("#PhotoReel").mCustomScrollbar({
+							horizontalScroll:false,
+							scrollButtons:{
+								enable:true,
+								scrollType:"pixels",
+								scrollAmount:116
+							}
+						});
+						
+						
+						function snapScrollbar(){
+							if(!$(document).data("mCS-is-touch-device")){ //no snapping for touch devices
+								var posX=$("#content_2 .mCSB_container").position().left;
+								var closestX=findClosest(Math.abs(posX),snapTo);
+								if(closestX===0){
+									$("#content_2").mCustomScrollbar("scrollTo","left",{
+										callback:false //scroll to is already a callback fn
+									});
+								}else{
+									$("#content_2").mCustomScrollbar("scrollTo",closestX,{
+										callback:false //scroll to is already a callback fn
+									});
+								}
+							}
+						}
+						function findClosest(num,arr){
+			                var curr=arr[0];
+		    	            var diff=Math.abs(num-curr);
+		        	        for(var val=0; val<arr.length; val++){
+		            	        var newdiff=Math.abs(num-arr[val]);
+		                	    if(newdiff<diff){
+		                    	    diff=newdiff;
+		                        	curr=arr[val];
+		                    	}
+		                	}
+		                	return curr;
+		            	}
+					});
+				})(jQuery);
 			</script>
 </body>
 </html>

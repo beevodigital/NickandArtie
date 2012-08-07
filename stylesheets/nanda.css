@@ -86,6 +86,26 @@ body{
 	display:block;
 }
 
+.advertisement-left
+{
+	width:250px;
+	margin-left:-20px;
+	padding:20px 0 10px 0;
+}
+.advertisement-right
+{
+	width:250px;
+	padding:20px 0 10px 0;
+}
+
+/*** Photo Reel ***/
+#PhotoReel
+{
+	height:250px;
+}
+
+/*** End of Photo Reel ***/
+
 /*** twitter-module ***/
 .twitter-module
 {
@@ -93,6 +113,7 @@ body{
 	width:200px;
 	margin:15px 0 0 12px;
 	padding:0 5px 5px 5px;
+	font-size:9pt;
 }
 .twitter-module-heading
 {
@@ -110,9 +131,67 @@ body{
 }
 .twitter-module-body
 {
+	text-align:center;
 	background-image:url('../images/content-background.png');
 }
+.twitter-module-body a
+{
+	color:#999;
+}
+.twitter-footer
+{
+	background-image:url('../images/background_opaque.png');
+}
 /*** end of twitter-module ***/
+
+/*** photo-module ***/
+.photo-module
+{
+	background-image:url('../images/background_opaque.png');
+	width:200px;
+	margin:15px 0 0 12px;
+	padding:0 0px 0px 0px;
+}
+.photo-module-heading
+{
+	background-image:url('../images/photohead.png');
+	width:139px;
+	height:42px;
+}
+
+.photo-module-arrow
+{
+	background-image:url('../images/header_arrow_trans.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	height:10px;
+}
+.photo-module-body
+{
+	background-image:url('../images/content-background.png');
+}
+/*** end of photo-module ***/
+
+/*** road-module ***/
+.road-module
+{
+	background-image:url('../images/background_opaque.png');
+	width:200px;
+	margin:15px 0 0 12px;
+	padding:0 5px 5px 5px;
+}
+.road-module-heading
+{
+	background-image:url('../images/roadhead.png');
+	width:115px;
+	height:89px;
+}
+
+.road-module-body
+{
+	background-image:url('../images/content-background.png');
+}
+/*** end of road-module ***/
 
 /*** shows-module ***/
 .shows-module
