@@ -29,6 +29,7 @@ body{
 {
 	float:left;
 	margin:0 0 0 15px;
+	font-size:10pt;
 }
 /*** end of navigation ***/
 
@@ -36,14 +37,15 @@ body{
 {
 	float:right;
 	width:565px;
-	margin:-80px 30px 0 0;
+	margin:-80px 193px 10px 0;
+	height:100px;
 }
 
 .listenlive
 {
 	float:left;
-	width:192px;
-	height:39px;
+	width:150px;
+	height:31px;
 	margin-top:20px;
 }
 
@@ -89,7 +91,7 @@ body{
 .advertisement-left
 {
 	width:250px;
-	margin-left:-20px;
+	margin-left:-70px;
 	padding:20px 0 10px 0;
 }
 .advertisement-right
@@ -101,7 +103,7 @@ body{
 /*** Photo Reel ***/
 #PhotoReel
 {
-	height:250px;
+	height:450px;
 }
 
 /*** End of Photo Reel ***/
@@ -150,13 +152,16 @@ body{
 	background-image:url('../images/background_opaque.png');
 	width:200px;
 	margin:15px 0 0 12px;
-	padding:0 0px 0px 0px;
+	padding:5px 0px 0px 0px;
 }
 .photo-module-heading
 {
 	background-image:url('../images/photohead.png');
 	width:139px;
 	height:42px;
+	margin-left:30px;
+	padding-bottom:5px;
+	background-repeat:no-repeat;
 }
 
 .photo-module-arrow
@@ -218,6 +223,13 @@ body{
 .shows-module-body
 {
 	background-image:url('../images/content-background.png');
+}
+
+.shows-module-body li
+{
+	font-size:10pt;
+	border-bottom:1px solid #999;
+	padding-left:25px;
 }
 /*** end of shows-module ***/
 
@@ -286,6 +298,11 @@ body{
 }
 
 .tweet_list .tweet_even {
+	border-bottom:1px solid #999;
+}
+
+.tweet_list .tweet_odd {
+	border-bottom:1px solid #999;
 }
 
 .tweet_list .tweet_avatar {

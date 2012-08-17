@@ -28,6 +28,7 @@
 		
 		.tweet_list .tweet_even {
 			background-color: #91E5E7;
+			border-bottom: 2px solid red;
 		}
 		
 		.tweet_list .tweet_avatar {
